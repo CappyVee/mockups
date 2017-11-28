@@ -6,7 +6,69 @@
 }
 
 .columns {
-  min-height: 100px;
+  height: 100px;
+  display: flex!important;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #fff;
 }
 
 /* End for testing */
+.columns.a {
+    width: 90%;
+}
+
+.columns.b, .columns.d, .columns.e, .columns.f {
+    display: none;
+}
+
+body > div {
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .columns.d, .columns.e, .columns.f {
+    display:block;
+    width: 30%;
+  }
+
+  .columns.d, .columns.f {
+    float:left;
+    margin-right: 10px;
+  }
+  .columns.e {
+    float:right;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .columns.b {
+    display: block;
+  }
+
+  .columns.a {
+    width:  25%;
+    float:  left;
+  }
+
+  .columns.b {
+    width:  20%;
+    float: right;
+  }
+
+  .header {
+    overflow: auto;
+  }
+  .main > div {
+    float: left;
+    width: 33.3333%;
+    padding: 0 10px;
+  }
+
+  .columns.d, .columns.e, .columns.f {
+    float: none;
+    margin: auto;
+  }
+}
