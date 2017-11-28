@@ -1,0 +1,44 @@
+/* For testing only */
+
+*:not(body):not(html) {
+  box-sizing:border-box;
+  border:1px dashed #000;
+}
+
+.column {
+  min-height: 100px;
+  margin-bottom:  2%;
+}
+
+/* End for testing */
+
+.column.a {height: 35vh;}
+
+@media screen and (min-width: 768px){
+  .column.b, .column.c {
+    width: 49%;
+    float:left;
+  }
+
+  .column.c {
+    margin-left:2%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .left {
+    width: 66.6666%;
+    float: left;
+  }
+  .right {
+    width: 33.3333%;
+    float: left;
+    padding-left:10px;
+  }
+  .column.b, .column.c {
+    float:none;
+    width:100%;
+    margin-left:0;
+    height:17.1vh
+  }
+}
