@@ -5,8 +5,158 @@
   border:1px dashed #000;
 }
 
-.columns {
-  min-height: 100px;
+.section {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #000;
 }
 
 /* End for testing */
+
+body {
+    margin: 0;
+}
+
+.half {
+    padding: 10px;
+}
+
+.half .section {
+    height: 25px;
+}
+
+.circle {
+    border-radius: 100%;
+}
+
+.circle.a {
+    width: 25px;
+    float: left;
+    margin-right: 10px;
+}
+
+.section.b {
+    width: 100px;
+}
+
+.half:last-child .section {
+    width: 24.24%;
+    float: left;
+    margin-right: 1%;
+}
+
+.half:last-child {
+    overflow: auto;
+    padding-right: 50px;
+}
+
+.section.large-text {flex-direction: column;height: initial;background-color: #fff;color: #000;}
+
+.half:last-child .section:last-child {
+    margin-right: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1500px;
+}
+
+.section p {
+    padding-left: 15px;
+}
+
+.g {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+
+.col-1 .section {
+    margin-bottom: 20px;
+}
+
+.top {
+    margin-bottom: 15px;
+}
+
+.container > div {
+    margin-bottom: 30px;
+    overflow: auto;
+}
+
+.nav {
+    overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .half {
+    float: left;
+    width: 50%;
+}
+
+
+.section.large-text {
+    float: left;
+    width: 54%;
+}
+
+.top {
+    display: flex;
+}
+
+.col.col-1 .section {
+    float: left;
+    width: 31.3333%;
+    margin-right: 3%;
+}
+
+.col.col-1 .section:last-child {
+    margin-right: 0;
+}
+
+.col-2, .col-3 {
+    width: 50%;
+    float: left;
+}
+
+.col-2 {
+    padding-right: 25px;
+}
+
+.one-fifth {
+    width: 20%;
+}
+
+.small-wrap > div {
+    float: left;
+}
+
+.one-fifth .section {
+  height: 63px;
+}
+
+.three-fifths {
+    width: 80%;
+    padding: 0 20px;
+}
+}
+
+@media screen and (min-width:1220px) {
+  .col {
+      float: left;
+      width:  33.3333%;
+  }
+
+  .col.col-1 .section {
+      float: none;
+      width: 100%;
+  }
+
+  .col.col-1 {
+      padding-right: 25px;
+  }
+}
